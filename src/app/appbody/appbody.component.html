@@ -1,0 +1,18 @@
+<!-- <div class="body">
+    <div class="name">
+        <span class="form-control col-6 form-control-lg spacer" id="name" type="text"></span>
+        <span class="form-control col-6  space" id="place" type="text"></span>
+    </div>
+</div> -->
+
+<div class="card col-6 space" *ngIf="showLoader"><img style="margin: 0 auto; max-width: 100px" src="https://loading.io/spinners/typing/lg.-text-entering-comment-loader.gif"></div>
+<div class="card col-6 space" *ngIf="!showLoader && details">
+
+  <div class="card-body">
+    <h5 class="card-title">{{details.name}}</h5>
+    <h6 class="card-title">{{details.id}}</h6>
+    <h6 class="card-title">{{details.email}}</h6>
+    <img [src]="details.avatar_url" class="card-img-top" alt="..."><br>
+    <a href="#" class="btn btn-primary">Go to profile</a>
+  </div>
+</div>
